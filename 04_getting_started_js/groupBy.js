@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 const students = [{
     'name': 'Daniel Taskoff',
     'course': 'Frontend JavaScript',
