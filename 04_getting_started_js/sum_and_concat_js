@@ -1,14 +1,14 @@
 
 const sum = function(a, b) {
-  return (typeof (a) === 'number' && typeof (b) === 'number') ?
-    a + b : new TypeError('Something is wrong with the types.');
+  if (typeof (a) === 'number' && typeof (b) === 'number') return a + b;
+  throw new TypeError('Something is wrong with the types.');
 };
 
-console.log(sum(1, 2));
+sum(1, 2);
 
 const concat = function(a, b) {
-  return (typeof (a) === 'string' && typeof (b) === 'string') ?
-    a + b : new TypeError('Something is wrong with the types.');
+  if (typeof (a) === 'string' && typeof (b) === 'string') return a + b;
+  throw new TypeError('Something is wrong with the types.');
 };
 
-console.log(concat('a', 'b'));
+concat(1, 'b');
