@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 const only = function(type, arr) {
     let flag = true;
     arr.forEach((element) => {
