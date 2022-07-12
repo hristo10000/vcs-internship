@@ -1,0 +1,12 @@
+var arr = [];
+var range = function(from, to){
+    if(from===to){
+        return arr;
+    }
+    let tempArr = [];
+    tempArr[0] = from;
+    arr = arr.concat(tempArr);
+    range(from-1, to);
+}
+
+console.log(range(1, 10));
