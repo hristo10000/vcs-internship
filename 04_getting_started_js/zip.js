@@ -1,16 +1,19 @@
 const zip = function(...args) {
   const result = [];
   let tempArr = [];
-  for (let i=0; i<3; i++) {
-    result[i] = [];
+  let count = 0;
+
+  args[0].map(_ =>{
+    result[count] = [];
     args.forEach((list) => {
-      if (typeof(list[i])!==undefined) {
-        tempArr = tempArr.concat(list[i]);
-        result[i] = result[i].concat(tempArr);
+      if (typeof(list[count])!==undefined) {
+        tempArr = tempArr.concat(list[count]);
+        result[count] = result[count].concat(tempArr);
         tempArr = [];
       }
     });
-  }
+    count++;
+  });
   return result;
 };
 
