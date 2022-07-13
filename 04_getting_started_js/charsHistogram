@@ -1,0 +1,12 @@
+const charsHistogram = (str) => {
+  return str.toLowerCase().split('').reduce((total, letter) => {
+    if (letter != ' ') {
+      total[letter] ? total[letter]++ : total[letter] = 1;
+    }
+    return total;
+  }, {});
+};
+
+const str = 'Count the characters in this very profound sentence';
+
+console.log(charsHistogram(str));
