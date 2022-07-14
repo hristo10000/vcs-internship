@@ -1,13 +1,6 @@
 const only = function(type, arr) {
-    let flag = true;
-    arr.forEach((element) => {
-      if (typeof(element)!=type) {
-        flag = false;
-      }
-    });
-    return flag;
-  };
+  return arr.every((element) => typeof(element)==type);
+};
   
-  console.log(only('string', [1, 2, 3, 4])); // false
-  console.log(only('number', [1, 2, 3, 4])); // true
-  
+console.log(only('string', [1, 2, 3, 4])); // false
+console.log(only('number', [1, 2, 3, 4])); // true
