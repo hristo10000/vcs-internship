@@ -1,0 +1,1 @@
+The Logic that corresponds for the weather forecast functionality is located in this folder.
